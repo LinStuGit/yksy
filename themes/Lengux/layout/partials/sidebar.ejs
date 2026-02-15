@@ -1,0 +1,78 @@
+<div class="position-sticky">
+  <% if (theme.search.acquiesce) {%>
+    <div class="card">
+      <%- partial('partials/_global/search')%>
+    </div>
+    <% } %>
+      <div class="card">
+        <div style="background-color: #0F172A;padding: 20px;text-align: center;"><img
+            src="http://q1.qlogo.cn/g?b=qq&nk=1217671134&s=100" alt=""  style="border-radius: 100%;">
+        </div>
+        <div class="card-body">
+          <% if (theme.sildertrue) {%>
+            <h5 class="card-title">
+              <%=theme.silder.title%>
+            </h5>
+            <% } %>
+          <p class="card-text">
+            <%=theme.silder.about%>
+          </p>
+          <p class="card-text"><small class="text-muted">
+              <% if (theme.hitokotoIstrue) {%>
+                <p id="hitokoto">
+                  <script src="<%= theme.hitokoto %>"></script>
+                </p>
+                <% } %>
+            </small></p>
+        </div>
+      </div>
+      <% if (theme.linkhidden) {%>
+        <div class="card cardtop">
+          <div style="background-color: #0F172A;padding:0 10px;color: #fff;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+            <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+          </svg>&nbsp;友情链接</div>
+          <div style="padding: 10px;">
+            <%- partial('partials/_layout/silder_link')%>
+          </div>
+        </div>
+        <% } %>
+        <% if (theme.sildertags) {%>
+          <div class="card cardtop">
+            <div style="background-color: #0F172A;padding:0 10px;color: #fff;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmarks" viewBox="0 0 16 16">
+              <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
+              <path d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"/>
+            </svg>&nbsp;标签</div>
+            <div style="padding: 10px;">
+              <% if (page.posts !==undefined && page.posts.length> 0) { %>
+                <% let tagCount={}; %>
+                  <% page.posts.each(tag=> {
+                    if (tagCount[tag.label]) {
+                    tagCount[tag.label] += 1;
+                    } else {
+                    tagCount[tag.label] = 1;
+                    }
+                    }); %>
+                    <div class="tagbox">
+                      <% Object.keys(tagCount).forEach(tag=> { %>
+                        <span class="tagcard">
+                          <%= tag %>
+                        </span> 
+                        <!-- <%= tagCount[tag] %> -->
+                        <% }); %>
+                    </div>
+                    <% } %>
+            </div>
+          </div>
+          <% } %>
+  
+</div>
+
+
+
+
+        
+        
+         
+           

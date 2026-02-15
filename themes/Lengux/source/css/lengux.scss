@@ -1,0 +1,118 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.posts-img {
+  width: 200px;
+  height: 100%;
+}
+.posts-display {
+  display: flex;
+  flex-direction: column;
+}
+.pageluist {
+  .col-md-6 {
+    width: 100%;
+    margin: auto;
+  }
+}
+// 打字机
+.typing-demo {
+  width: 22ch;
+  animation: typing 8s steps(22) infinite,
+    blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 1em;
+  text-align: center;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+#linkshear {
+  svg {
+    padding: 0 10px;
+  }
+}
+.archive-item {
+  display: flex;
+  justify-content: space-around;
+}
+// search
+#local-search-result {
+  position: absolute;
+  max-height: 960px;
+  z-index: 1050;
+  background-color: black;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: all 0.3s;
+  .search-result-list {
+    padding: 20px;
+    transition: all 0.3s;
+  }
+  .search-result-title {
+    color: #fff;
+    font-size: 2rem;
+  }
+}
+
+.darkmode-toggle {
+  z-index: 999999;
+}
+#content-inner img{
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  #updown {
+    display: none;
+  }
+  #bd-placeholder-img {
+    display: block;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .rounded {
+    border-top-right-radius: none !important;
+    border-top-left-radius: none !important;
+  }
+}
+@media (min-width: 768px) {
+  #bd-placeholder-img {
+    display: none;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 22ch;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@import "./bootstrap.min.css";
+@import "./layout/header.scss";
+@import "./layout/index.scss";
+@import "./layout/layout.scss";
+@import "./layout/dark.css"
