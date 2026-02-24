@@ -1,6 +1,9 @@
-node_modules/
-.env
-.dev.vars
-dist/
-wrangler.toml.local
+.DS_Store
+Thumbs.db
+db.json
 *.log
+node_modules/
+public/
+.deploy*/
+_multiconfig.yml
+!source/admin/
