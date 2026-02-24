@@ -40,9 +40,9 @@ collections:
       - { label: "草稿", name: draft, widget: "boolean", default: false, required: false }
       - { label: "内容", name: "body", widget: "markdown", required: true }
 
-  - name: "pages"
-    label: "页面"
-    folder: "source"
+  - name: "about"
+    label: "关于"
+    folder: "source/about"
     create: true
     slug: "{{slug}}"
     extension: md
@@ -50,8 +50,7 @@ collections:
     
     fields:
       - { label: "标题", name: "title", widget: "string" }
-      - { label: "路径", name: "path", widget: "string" }
-      - { label: "布局", name: "layout", widget: "string", default: "page" }
+      - { label: "时间", name: "path", widget: "string" }
       - { label: "内容", name: "body", widget: "markdown" }
 
   - name: "settings"
