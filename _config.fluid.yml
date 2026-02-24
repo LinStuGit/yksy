@@ -1048,11 +1048,13 @@ links:
       avatar: "/img/favicon.png"
     }
     - {
-      title: "QRRR",
-      intro: "QRRR的博客",
-      link: "https://qrrr.net",
+      title: "LIN",
+      intro: "lin的博客",
+      link: "https://lin.linthu.cn",
       avatar: "/img/favicon.png"
     }
+
+  default_avatar: /img/avatar.png
 
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
