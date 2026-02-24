@@ -50,7 +50,7 @@ collections:
     
     fields:
       - { label: "标题", name: "title", widget: "string" }
-      - { label: "时间", name: "path", widget: "string" }
+      - { label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", required: true }
       - { label: "内容", name: "body", widget: "markdown" }
 
   - name: "settings"
