@@ -1,6 +1,11 @@
 backend:
   name: git-gateway
-  branch: main  # 或 master，根据您的仓库
+  branch: main  # 或 master，
+  base_url: https://auth.linthu.cn
+  identity_url: https://auth.linthu.cn/identity
+  gateway_url: https://auth.linthu.cn/git/github
+  use_json_payload: true
+  
   commit_messages:
     create: "CMS: 创建 {{collection}} {{slug}}"
     update: "CMS: 更新 {{collection}} {{slug}}"
